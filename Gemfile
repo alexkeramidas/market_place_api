@@ -30,6 +30,13 @@ gem 'spring',        group: :development
 #Api gems
 gem 'active_model_serializers'
 
+#Testing
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
