@@ -39,14 +39,12 @@ RSpec.describe Api::V1::SessionsController, :type => :controller do
   end
 
   describe "DELETE #destroy" do
-
     before(:each) do
       @user = FactoryGirl.create :user
-      sign_in @user, store: false
-      delete :destroy
+      sign_in @user
+      delete :destroy, id: @user.auth_token
     end
-
     it { should respond_with 204 }
-
   end
+
 end
