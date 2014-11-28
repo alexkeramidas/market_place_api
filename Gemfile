@@ -24,23 +24,24 @@ gem 'jquery-rails'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
- gem 'spring',        group: :development
-
 #Api gems
 gem 'active_model_serializers'
 
-#Testing
-group :test do
-  gem 'rspec-rails'
+#User authentication
+gem 'devise'
+
+group :development, :test do
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
   gem 'factory_girl_rails'
   gem 'ffaker'
+end
+
+group :test do
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'rspec-collection_matchers'
 end
-
-#User authentication
-gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
