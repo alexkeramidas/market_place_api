@@ -36,6 +36,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'shoulda-matchers'
+  gem 'rspec-collection_matchers'
 end
 
 #User authentication
